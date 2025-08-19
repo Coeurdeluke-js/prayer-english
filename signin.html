@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Prayer English - Iniciar Sesión</title>
+    <meta name="description" content="Sección en desarrollo - Iniciar Sesión en Prayer English.">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/signin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-icon">
+                    <img src="church_jesus_christ_lowfidelity_symbol.png" alt="Logo" class="logo-image">
+                </div>
+                <div class="logo-text">
+                    <div class="logo-main">Prayer English</div>
+                    <div class="logo-sub">Learn & Practice</div>
+                </div>
+            </div>
+            <div class="nav-links">
+                <a href="index.html#prayer-structure" class="nav-link">Estructura</a>
+                <a href="index.html#practice" class="nav-link">Práctica</a>
+                <a href="index.html#resources" class="nav-link">Recursos</a>
+                <a href="index.html#about" class="nav-link">Acerca de</a>
+            </div>
+            <div class="nav-utilities">
+                <a href="index.html" class="sign-in-btn" aria-label="Volver">
+                    <div class="custom-icon icon-home"></div>
+                    Volver
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="dev-hero">
+        <div class="container">
+            <div class="dev-card">
+                <div class="custom-icon icon-grid"></div>
+                <h1 class="dev-title">Sección en Desarrollo</h1>
+                <p class="dev-subtitle">Estamos trabajando para habilitar el inicio de sesión. Muy pronto podrás crear tu cuenta, guardar tu progreso y acceder a funciones avanzadas.</p>
+                <div class="dev-actions">
+                    <a href="index.html#practice" class="btn btn-primary">
+                        <div class="custom-icon icon-chevron-right-white"></div>
+                        Ir a Practicar
+                    </a>
+                    <a href="index.html" class="btn btn-secondary">
+                        <div class="custom-icon icon-home"></div>
+                        Volver al Inicio
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-bottom" style="border-top:none;padding-top:0;">
+                <div class="footer-legal">© <span id="year"></span> Prayer English. Todos los derechos reservados.</div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        (function(){
+            var y = document.getElementById('year');
+            if (y) y.textContent = new Date().getFullYear();
+        })();
+    </script>
+</body>
+</html>
+

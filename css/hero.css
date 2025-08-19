@@ -1,0 +1,181 @@
+/* ===================================
+   HERO SECTION STYLES
+   =================================== */
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('../hero.jpg') center/cover no-repeat;
+    min-height: 560px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    padding: 140px var(--spacing-lg) 120px;
+    position: relative;
+    margin-top: 20px;
+}
+
+/* Hero Content */
+.hero-content {
+    max-width: var(--container-max-width);
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+/* Accent Line */
+.accent-line {
+    width: 64px;
+    height: 3px;
+    background-color: var(--primary-blue);
+    margin-bottom: var(--spacing-xl);
+    opacity: 0.95;
+}
+
+/* Hero Title */
+.hero-title {
+    font-size: var(--font-size-5xl);
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+/* Hero Subtitle */
+.hero-subtitle {
+    font-size: var(--font-size-xl);
+    font-weight: 400;
+    color: rgba(255,255,255,0.92);
+    margin-bottom: var(--spacing-xxl);
+    opacity: 1;
+    line-height: 1.6;
+    max-width: 720px;
+}
+
+/* CTA Button */
+.cta-button {
+    background-color: var(--accent-blue);
+    color: white;
+    border: none;
+    padding: var(--spacing-md) var(--spacing-xl);
+    border-radius: 2px;
+    font-size: var(--font-size-base);
+    font-weight: 500;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    transition: all var(--transition-normal);
+    text-decoration: none;
+    font-family: inherit;
+    letter-spacing: 0.01em;
+}
+
+.cta-button:hover {
+    background-color: var(--secondary-blue);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 125, 165, 0.3);
+}
+
+.cta-button:active {
+    transform: translateY(0);
+}
+
+/* Responsive Hero */
+@media (max-width: 768px) {
+    .hero {
+        min-height: 380px;
+        padding: 60px var(--spacing-md) 60px;
+        text-align: center;
+        background-position: center;
+        margin-top: 15px;
+    }
+    
+    .hero-title {
+        font-size: var(--font-size-3xl);
+        margin-bottom: var(--spacing-md);
+        line-height: 1.1;
+    }
+    
+    .hero-subtitle {
+        font-size: var(--font-size-base);
+        max-width: 100%;
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    .cta-button {
+        padding: var(--spacing-sm) var(--spacing-lg);
+        font-size: var(--font-size-sm);
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .accent-line {
+        width: 50px;
+        height: 3px;
+        margin-bottom: var(--spacing-md);
+    }
+}
+
+@media (max-width: 575px) {
+    .hero {
+        min-height: 320px;
+        padding: 50px var(--spacing-sm) 40px;
+        margin-top: 10px;
+    }
+    
+    .hero-title {
+        font-size: var(--font-size-2xl);
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .hero-subtitle {
+        font-size: var(--font-size-sm);
+        margin-bottom: var(--spacing-md);
+        line-height: 1.5;
+    }
+    
+    .accent-line {
+        width: 40px;
+        height: 2px;
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .cta-button {
+        padding: var(--spacing-sm) var(--spacing-md);
+        font-size: var(--font-size-sm);
+        height: 44px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        min-height: 280px;
+        padding: 40px var(--spacing-sm) 30px;
+        margin-top: 8px;
+    }
+    
+    .hero-title {
+        font-size: var(--font-size-xl);
+        line-height: 1.1;
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .hero-subtitle {
+        font-size: var(--font-size-xs);
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .accent-line {
+        width: 35px;
+        height: 2px;
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .cta-button {
+        padding: var(--spacing-xs) var(--spacing-md);
+        font-size: var(--font-size-xs);
+        height: 40px;
+    }
+}

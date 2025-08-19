@@ -1,0 +1,191 @@
+/* ===================================
+   SIGN IN PAGE STYLES
+   =================================== */
+
+.dev-hero {
+    background-color: var(--bg-primary);
+    padding: 100px 0 80px;
+}
+
+.dev-card {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-xl);
+    box-shadow: 0 2px 8px var(--shadow-light);
+    padding: var(--spacing-xxxl);
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.dev-card .custom-icon {
+    width: 56px;
+    height: 56px;
+    margin-bottom: var(--spacing-md);
+}
+
+.dev-title {
+    font-size: var(--font-size-3xl);
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+    margin-bottom: var(--spacing-sm);
+}
+
+.dev-subtitle {
+    color: var(--text-secondary);
+    font-size: var(--font-size-base);
+    margin-bottom: var(--spacing-xxl);
+}
+
+.dev-actions {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-sm);
+}
+
+/* Botones con el mismo estilo que index.html */
+.dev-actions .btn {
+    background-color: var(--primary-blue);
+    color: white;
+    border: none;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border-radius: 2px;
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    transition: all var(--transition-normal);
+    text-decoration: none;
+    font-family: inherit;
+    letter-spacing: 0.01em;
+    height: 40px;
+    min-width: 140px;
+    white-space: nowrap;
+}
+
+.dev-actions .btn:hover {
+    background-color: var(--secondary-blue);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 125, 165, 0.3);
+}
+
+.dev-actions .btn:active {
+    transform: translateY(0);
+}
+
+.dev-actions .btn-secondary {
+    background-color: transparent;
+    color: var(--primary-blue);
+    border: 2px solid var(--primary-blue);
+    border-radius: 2px;
+}
+
+.dev-actions .btn-secondary:hover {
+    background-color: var(--primary-blue);
+    color: white;
+}
+
+.dev-actions .btn .custom-icon {
+    color: inherit;
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ===================================
+   RESPONSIVE SIGN IN
+   =================================== */
+
+/* Mobile Small (320px - 575px) */
+@media (max-width: 575px) {
+    .dev-hero {
+        padding: 60px 0 40px;
+    }
+    
+    .dev-card {
+        padding: var(--spacing-lg);
+        margin: 0 var(--spacing-sm);
+    }
+    
+    .dev-title {
+        font-size: var(--font-size-2xl);
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .dev-subtitle {
+        font-size: var(--font-size-sm);
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    .dev-actions {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+    
+    .dev-actions .btn {
+        width: 100%;
+        justify-content: center;
+        height: 44px;
+        white-space: nowrap;
+    }
+    
+    .dev-actions .btn .custom-icon {
+        width: 18px;
+        height: 18px;
+    }
+    
+    .dev-card .custom-icon {
+        width: 48px;
+        height: 48px;
+        margin-bottom: var(--spacing-sm);
+    }
+}
+
+/* Mobile Large (576px - 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+    .dev-hero {
+        padding: 80px 0 60px;
+    }
+    
+    .dev-card {
+        padding: var(--spacing-xl);
+        margin: 0 var(--spacing-md);
+    }
+    
+    .dev-title {
+        font-size: var(--font-size-3xl);
+    }
+    
+    .dev-subtitle {
+        font-size: var(--font-size-base);
+    }
+    
+    .dev-actions {
+        gap: var(--spacing-md);
+    }
+}
+
+/* Tablet (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .dev-hero {
+        padding: 100px 0 80px;
+    }
+    
+    .dev-card {
+        padding: var(--spacing-xxxl);
+        margin: 0 var(--spacing-lg);
+    }
+    
+    .dev-actions {
+        gap: var(--spacing-lg);
+    }
+}
+
+

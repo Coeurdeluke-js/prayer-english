@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Aprende a Orar en Inglés - Guía de Oración</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-icon">
+                    <img src="church_jesus_christ_lowfidelity_symbol.png" alt="Logo de Oración" class="logo-image">
+                </div>
+                <div class="logo-text">
+                    <div class="logo-main">Prayer English</div>
+                    <div class="logo-sub">Learn & Practice</div>
+                </div>
+            </div>
+            
+            <div class="nav-links">
+                <a href="#home" class="nav-link">Inicio</a>
+                <a href="#guide" class="nav-link">Guía</a>
+                <a href="#practice" class="nav-link">Práctica</a>
+                <a href="#resources" class="nav-link">Recursos</a>
+                <a href="#about" class="nav-link">Acerca de</a>
+            </div>
+            
+            <div class="nav-utilities">
+                <a class="sign-in-btn" href="signin.html">
+                    <div class="custom-icon icon-user"></div>
+                    Iniciar Sesión
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="accent-line"></div>
+            <h1 class="hero-title">Aprende a Orar en Inglés</h1>
+            <p class="hero-subtitle">Descubre la estructura y belleza de la oración en inglés</p>
+            <button class="cta-button">Comenzar a Aprender</button>
+        </div>
+    </section>
+
+    <!-- Prayer Structure Section -->
+    <section class="prayer-structure" id="guide">
+        <div class="container">
+            <div class="section-header">
+                <h2>Estructura de Oración</h2>
+                <p>Sigue esta estructura simple para aprender a orar en inglés</p>
+                <div class="custom-icon icon-arrow-right"></div>
+            </div>
+            
+            <div class="prayer-cards">
+                <div class="prayer-card">
+                    <div class="card-number">1</div>
+                    <h3>Heavenly Father</h3>
+                    <p>Comienza tu oración dirigiéndote al Padre Celestial</p>
+                    <div class="example">
+                        <strong>Ejemplo:</strong> "Heavenly Father"
+                    </div>
+                </div>
+                
+                <div class="prayer-card">
+                    <div class="card-number">2</div>
+                    <h3>I thank thee for...</h3>
+                    <p>Expresa gratitud por tus bendiciones</p>
+                    <div class="example">
+                        <strong>Ejemplo:</strong> "I thank thee for my family, my health, and this beautiful day."
+                    </div>
+                </div>
+                
+                <div class="prayer-card">
+                    <div class="card-number">3</div>
+                    <h3>I ask thee...</h3>
+                    <p>Pide lo que necesitas o deseas</p>
+                    <div class="example">
+                        <strong>Ejemplo:</strong> "I ask thee to help me with my studies and to be kind to others."
+                    </div>
+                </div>
+                
+                <div class="prayer-card">
+                    <div class="card-number">4</div>
+                    <h3>In the name of Jesus Christ, Amen.</h3>
+                    <p>Cierra tu oración en el nombre de Jesucristo</p>
+                    <div class="example">
+                        <strong>Ejemplo:</strong> "In the name of Jesus Christ, Amen."
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Practice Section -->
+    <section class="practice-section" id="practice">
+        <div class="container">
+            <h2>Practica Tu Oración</h2>
+            <div class="practice-container">
+                <div class="prayer-builder">
+                    <div class="prayer-step active" data-step="1">
+                        <h3>Paso 1: Dirígete al Padre Celestial</h3>
+                        <input type="text" class="prayer-input" placeholder="Heavenly Father" value="Heavenly Father">
+                    </div>
+                    
+                    <div class="prayer-step" data-step="2">
+                        <h3>Paso 2: Expresa Gratitud</h3>
+                        <textarea class="prayer-input" placeholder="I thank thee for...">I thank thee for my family, my health, and this beautiful day.</textarea>
+                    </div>
+                    
+                    <div class="prayer-step" data-step="3">
+                        <h3>Paso 3: Pide Bendiciones</h3>
+                        <textarea class="prayer-input" placeholder="I ask thee...">I ask thee to help me with my studies and to be kind to others.</textarea>
+                    </div>
+                    
+                    <div class="prayer-step" data-step="4">
+                        <h3>Paso 4: Cierra en el Nombre de Jesús</h3>
+                        <input type="text" class="prayer-input" placeholder="In the name of Jesus Christ, Amen." value="In the name of Jesus Christ, Amen.">
+                    </div>
+                    
+                    <div class="step-navigation">
+                        <button class="btn btn-secondary prev-btn" disabled>
+                            <div class="custom-icon icon-chevron-left"></div> Anterior
+                        </button>
+                        <button class="btn btn-primary next-btn">
+                            Siguiente <div class="custom-icon icon-chevron-right-white"></div>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="prayer-preview">
+                    <h3>Tu Oración</h3>
+                    <div class="preview-content">
+                        <p id="prayer-preview-text">Heavenly Father, I thank thee for my family, my health, and this beautiful day. I ask thee to help me with my studies and to be kind to others. In the name of Jesus Christ, Amen.</p>
+                    </div>
+                    <button class="speak-btn">
+                        <div class="custom-icon icon-volume"></div> Escuchar Oración
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What to Expect Section -->
+    <section class="expect-section" id="resources">
+        <div class="container">
+            <div class="expect-grid">
+                <div class="expect-card">
+                    <div class="expect-image">
+                        <div class="custom-icon custom-icon-large icon-book-open"></div>
+                    </div>
+                    <h3>Estructura de la Oración</h3>
+                    <p>Aprende la estructura fundamental de la oración en inglés: apertura, agradecimiento, peticiones y cierre. Domina el patrón básico para crear oraciones coherentes y significativas.</p>
+                    <button class="expect-btn">Aprender Estructura</button>
+                </div>
+                
+                <div class="expect-card">
+                    <div class="expect-image">
+                        <div class="custom-icon custom-icon-large icon-microphone"></div>
+                    </div>
+                    <h3>Práctica y Pronunciación</h3>
+                    <p>Mejora tu pronunciación y fluidez con ejercicios interactivos. Practica las frases más comunes de oración y desarrolla confianza al hablar en inglés.</p>
+                    <button class="expect-btn">Practicar Ahora</button>
+                </div>
+                
+                <div class="expect-card">
+                    <div class="expect-image">
+                        <div class="custom-icon custom-icon-large icon-users"></div>
+                    </div>
+                    <h3>Recursos de Aprendizaje</h3>
+                    <p>Accede a una amplia colección de recursos: ejemplos de oraciones, guías de vocabulario, ejercicios de práctica y consejos para mejorar tu inglés espiritual.</p>
+                    <button class="expect-btn">Explorar Recursos</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section class="resources-section">
+        <div class="container">
+            <h2>Recursos Adicionales</h2>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="custom-icon custom-icon-xl icon-book"></div>
+                    <h3>Ejemplos de Oración</h3>
+                    <p>Frases y expresiones comunes de oración en inglés</p>
+                </div>
+                <div class="resource-card">
+                    <div class="custom-icon custom-icon-xl icon-microphone"></div>
+                    <h3>Guía de Pronunciación</h3>
+                    <p>Aprende a pronunciar correctamente las palabras de oración</p>
+                </div>
+                <div class="resource-card">
+                    <div class="custom-icon custom-icon-xl icon-users"></div>
+                    <h3>Comunidad</h3>
+                    <p>Conéctate con otros que están aprendiendo a orar en inglés</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>Acerca de Prayer English</h2>
+                <p>Descubre la historia y misión detrás de nuestro proyecto de aprendizaje</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-grid">
+                    <div class="about-card">
+                        <div class="about-icon">
+                            <div class="custom-icon custom-icon-xl icon-heart"></div>
+                        </div>
+                        <h3>Nuestra Misión</h3>
+                        <p>Facilitar el aprendizaje del inglés a través de la práctica de la oración, creando un puente entre el desarrollo espiritual y el crecimiento lingüístico.</p>
+                    </div>
+                    
+                    <div class="about-card">
+                        <div class="about-icon">
+                            <div class="custom-icon custom-icon-xl icon-target"></div>
+                        </div>
+                        <h3>Nuestro Enfoque</h3>
+                        <p>Combinamos la estructura tradicional de la oración con métodos modernos de aprendizaje de idiomas, ofreciendo una experiencia educativa única y significativa.</p>
+                    </div>
+                    
+                    <div class="about-card">
+                        <div class="about-icon">
+                            <div class="custom-icon custom-icon-xl icon-star"></div>
+                        </div>
+                        <h3>Nuestros Valores</h3>
+                        <p>Creemos en la accesibilidad, la práctica constante y el respeto por las creencias individuales, creando un ambiente inclusivo para todos los aprendices.</p>
+                    </div>
+                </div>
+                
+                <div class="about-story">
+                    <h3>¿Por qué Prayer English?</h3>
+                    <p>Nacimos de la necesidad de conectar el aprendizaje del inglés con algo más profundo y personal. La oración es una práctica universal que trasciende culturas y religiones, y aprender a expresarla en inglés puede abrir puertas tanto espirituales como profesionales.</p>
+                    
+                    <p>Nuestro proyecto está diseñado para personas de todos los niveles de inglés, desde principiantes hasta avanzados, que deseen mejorar sus habilidades lingüísticas mientras exploran la belleza de la comunicación espiritual en un nuevo idioma.</p>
+                </div>
+                
+                <div class="about-features">
+                    <h3>Características Principales</h3>
+                    <div class="features-list">
+                        <div class="feature-item">
+                            <div class="custom-icon icon-check"></div>
+                            <span>Aprendizaje estructurado y progresivo</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="custom-icon icon-check"></div>
+                            <span>Práctica interactiva con pronunciación</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="custom-icon icon-check"></div>
+                            <span>Recursos adaptados a diferentes niveles</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="custom-icon icon-check"></div>
+                            <span>Enfoque en la comunicación real</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="church_jesus_christ_lowfidelity_symbol.png" alt="Logo" class="logo-image">
+                    </div>
+                    <div class="footer-title">Prayer English</div>
+                    <div class="footer-subtitle">Aprende • Practica • Mejora</div>
+                </div>
+                <nav class="footer-links">
+                    <a href="#home">Inicio</a>
+                    <a href="#guide">Guía</a>
+                    <a href="#practice">Práctica</a>
+                    <a href="#resources">Recursos</a>
+                    <a href="#about">Acerca de</a>
+                </nav>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-legal">© <span id="year"></span> Prayer English. Todos los derechos reservados.</div>
+                <div class="footer-policy">
+                    <a href="#">Privacidad</a>
+                    <span>·</span>
+                    <a href="#">Términos</a>
+                    <span>·</span>
+                    <a href="#">Contacto</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Chat Icon -->
+    <div class="floating-chat" id="floating-chat">
+        <div class="custom-icon icon-chat"></div>
+    </div>
+
+    <!-- Chatbot Interface -->
+    <div class="chatbot-interface" id="chatbot-interface">
+        <div class="chatbot-header">
+            <div class="chatbot-logo">
+                <div class="custom-icon icon-chat"></div>
+            </div>
+            <div class="chatbot-team">
+                <div class="team-avatar">👨‍💼</div>
+                <div class="team-avatar">👩‍💼</div>
+                <div class="team-avatar">👨‍💻</div>
+            </div>
+            <button class="chatbot-close" id="chatbot-close">×</button>
+        </div>
+        
+        <div class="chatbot-greeting">
+            <h3>¡Hola! 👋</h3>
+            <p>¿Cómo podemos ayudarte a aprender inglés?</p>
+        </div>
+        
+        <div class="chatbot-content">
+            <div class="chatbot-section">
+                <button class="chatbot-primary-btn">
+                    <span>Enviar mensaje</span>
+                    <div class="custom-icon icon-arrow-right"></div>
+                </button>
+                <p class="chatbot-availability">Te responderemos en 24 horas</p>
+            </div>
+            
+            <div class="chatbot-section">
+                <div class="chatbot-search">
+                    <input type="text" placeholder="Buscar ayuda..." class="chatbot-search-input">
+                    <div class="custom-icon icon-search"></div>
+                </div>
+            </div>
+            
+            <div class="chatbot-section">
+                <h4>Preguntas frecuentes:</h4>
+                <div class="chatbot-questions">
+                    <button class="chatbot-question">¿Cómo funciona la estructura de oración?</button>
+                    <button class="chatbot-question">¿Puedo practicar la pronunciación?</button>
+                    <button class="chatbot-question">¿Hay recursos para principiantes?</button>
+                    <button class="chatbot-question">¿Cómo mejoro mi inglés espiritual?</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chatbot-footer">
+            <div class="chatbot-nav-item">
+                <div class="custom-icon icon-home"></div>
+                <span>Inicio</span>
+            </div>
+            <div class="chatbot-nav-item">
+                <div class="custom-icon icon-chat"></div>
+                <span>Mensajes</span>
+            </div>
+            <div class="chatbot-nav-item">
+                <div class="custom-icon icon-search"></div>
+                <span>Ayuda</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

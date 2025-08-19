@@ -1,0 +1,300 @@
+/* ===================================
+   CHATBOT INTERFACE STYLES
+   =================================== */
+
+/* Floating Chat Button */
+.floating-chat {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(0, 125, 165, 0.3);
+    transition: all var(--transition-normal);
+    z-index: 1000;
+}
+
+.floating-chat:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(0, 125, 165, 0.4);
+}
+
+.floating-chat .custom-icon {
+    color: white;
+    width: 24px;
+    height: 24px;
+}
+
+/* Chatbot Interface */
+.chatbot-interface {
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    width: 380px;
+    max-height: 600px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    display: none;
+    overflow: hidden;
+    animation: slideInUp 0.3s ease-out;
+}
+
+.chatbot-interface.active {
+    display: block;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Chatbot Header */
+.chatbot-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.chatbot-logo .custom-icon {
+    color: white;
+    width: 20px;
+    height: 20px;
+}
+
+.chatbot-team {
+    display: flex;
+    gap: 5px;
+}
+
+.team-avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.chatbot-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color var(--transition-normal);
+}
+
+.chatbot-close:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Chatbot Greeting */
+.chatbot-greeting {
+    padding: 20px 20px 15px;
+    text-align: center;
+}
+
+.chatbot-greeting h3 {
+    color: white;
+    font-size: var(--font-size-xl);
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.chatbot-greeting p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: var(--font-size-sm);
+    margin: 0;
+}
+
+/* Chatbot Content */
+.chatbot-content {
+    background: white;
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.chatbot-section {
+    margin-bottom: 20px;
+}
+
+.chatbot-section:last-child {
+    margin-bottom: 0;
+}
+
+/* Primary Button */
+.chatbot-primary-btn {
+    width: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 12px;
+    font-size: var(--font-size-base);
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: transform var(--transition-normal);
+}
+
+.chatbot-primary-btn:hover {
+    transform: translateY(-1px);
+}
+
+.chatbot-primary-btn .custom-icon {
+    color: white;
+    width: 16px;
+    height: 16px;
+}
+
+.chatbot-availability {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: var(--font-size-xs);
+    margin: 8px 0 0;
+}
+
+/* Search Section */
+.chatbot-search {
+    position: relative;
+}
+
+.chatbot-search-input {
+    width: 100%;
+    padding: 12px 40px 12px 15px;
+    border: 2px solid var(--border-light);
+    border-radius: 10px;
+    font-size: var(--font-size-sm);
+    transition: border-color var(--transition-normal);
+}
+
+.chatbot-search-input:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+}
+
+.chatbot-search .custom-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-light);
+    width: 16px;
+    height: 16px;
+}
+
+/* Questions Section */
+.chatbot-section h4 {
+    color: var(--text-primary);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.chatbot-questions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.chatbot-question {
+    background: none;
+    border: 1px solid var(--border-light);
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-align: left;
+    font-size: var(--font-size-sm);
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+}
+
+.chatbot-question:hover {
+    background-color: var(--primary-blue);
+    color: white;
+    border-color: var(--primary-blue);
+}
+
+/* Chatbot Footer */
+.chatbot-footer {
+    display: flex;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.chatbot-nav-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 8px;
+    transition: background-color var(--transition-normal);
+}
+
+.chatbot-nav-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.chatbot-nav-item .custom-icon {
+    color: white;
+    width: 16px;
+    height: 16px;
+}
+
+.chatbot-nav-item span {
+    color: white;
+    font-size: 10px;
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .chatbot-interface {
+        width: 90vw;
+        right: 5vw;
+        bottom: 80px;
+    }
+    
+    .floating-chat {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+    }
+    
+    .floating-chat .custom-icon {
+        width: 20px;
+        height: 20px;
+    }
+}

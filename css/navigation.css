@@ -1,0 +1,245 @@
+/* ===================================
+   NAVIGATION STYLES
+   =================================== */
+
+/* Navigation Bar */
+.navbar {
+    background-color: var(--bg-primary);
+    height: var(--navbar-height);
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 1px 3px var(--shadow-light);
+    transition: background-color var(--transition-normal);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 2px;
+    height: 100%;
+}
+
+/* Logo Section */
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.logo-icon {
+    width: 28px;
+    height: 28px;
+    background: var(--bg-primary);
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.logo-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.0;
+}
+
+.logo-main {
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--text-primary);
+    letter-spacing: 0.3px;
+}
+
+.logo-sub {
+    font-size: 9px;
+    font-weight: 400;
+    color: var(--text-primary);
+    letter-spacing: 0.2px;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    gap: var(--spacing-xl);
+    align-items: center;
+}
+
+.nav-link {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 400;
+    font-size: var(--font-size-sm);
+    transition: color var(--transition-normal);
+    position: relative;
+}
+
+.nav-link:hover {
+    color: var(--primary-blue);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-blue);
+    transition: width var(--transition-normal);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Utilities Section */
+.nav-utilities {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-right: var(--spacing-md);
+}
+
+.utility-icons {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.utility-icons .custom-icon {
+    color: var(--text-primary);
+    font-size: var(--font-size-base);
+    cursor: pointer;
+    transition: color var(--transition-normal), background-color var(--transition-normal);
+    padding: var(--spacing-xs);
+    border-radius: var(--radius-sm);
+}
+
+.utility-icons .custom-icon:hover {
+    color: var(--primary-blue);
+    background-color: rgba(0, 125, 165, 0.1);
+}
+
+/* Sign In Button */
+.sign-in-btn {
+    background-color: var(--primary-blue);
+    color: white;
+    border: none;
+    padding: var(--spacing-xs) var(--spacing-lg);
+    border-radius: 2px;
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    transition: all var(--transition-normal);
+    height: 26px;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.sign-in-btn:hover {
+    background-color: var(--secondary-blue);
+    transform: translateY(-1px);
+}
+
+.sign-in-btn:active {
+    transform: translateY(0);
+}
+
+.sign-in-btn .custom-icon {
+    color: white !important;
+    filter: brightness(0) invert(1);
+    width: 14px;
+    height: 14px;
+}
+
+/* Responsive Navigation */
+@media (max-width: 991px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .nav-container {
+        padding: 0 var(--spacing-md);
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .logo-main {
+        font-size: 13px;
+    }
+    
+    .logo-sub {
+        font-size: 9px;
+    }
+    
+    .sign-in-btn {
+        height: 24px;
+        padding: 4px var(--spacing-md);
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 575px) {
+    .navbar {
+        height: 50px;
+    }
+    
+    .nav-container {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .logo-icon {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .logo-main {
+        font-size: 12px;
+    }
+    
+    .logo-sub {
+        font-size: 8px;
+    }
+    
+    .sign-in-btn {
+        height: 22px;
+        padding: 4px var(--spacing-sm);
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        height: 45px;
+    }
+    
+    .logo-main {
+        font-size: 11px;
+    }
+    
+    .logo-sub {
+        font-size: 7px;
+    }
+    
+    .sign-in-btn {
+        height: 20px;
+        padding: 3px var(--spacing-sm);
+        font-size: 9px;
+    }
+}
