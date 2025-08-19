@@ -223,12 +223,13 @@
     }
     
     .about-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 1fr;
         gap: var(--spacing-md);
     }
     
     .about-card {
         padding: var(--spacing-lg);
+        min-height: auto;
     }
     
     .about-card h3 {
@@ -491,7 +492,7 @@
     /* Expect Cards */
     .expect-grid {
         grid-template-columns: repeat(3, 1fr);
-        gap: var(--spacing-xxl);
+        gap: var(--spacing-lg);
     }
     
     /* Resources */
@@ -531,7 +532,7 @@
     
     .expect-grid {
         grid-template-columns: repeat(3, 1fr);
-        gap: var(--spacing-xxxl);
+        gap: var(--spacing-lg);
     }
     
     .resources-grid {

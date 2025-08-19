@@ -367,9 +367,17 @@ document.addEventListener('DOMContentLoaded', function() {
     questions.forEach(question => {
         question.addEventListener('click', function() {
             const questionText = this.textContent;
-            handleQuestion(questionText);
+            showQuestionResponse(questionText);
         });
     });
+    
+    // Handle back to questions button
+    const backBtn = document.getElementById('back-to-questions');
+    if (backBtn) {
+        backBtn.addEventListener('click', function() {
+            showQuestions();
+        });
+    }
     
     // Handle primary button click
     const primaryBtn = document.querySelector('.chatbot-primary-btn');
@@ -386,33 +394,87 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Handle question responses
-function handleQuestion(question) {
+// Show question response in the same chatbot interface
+function showQuestionResponse(question) {
     const responses = {
         '¿Cómo funciona la estructura de oración?': 'La estructura de oración en inglés sigue un patrón de 4 pasos: 1) Apertura (Heavenly Father), 2) Agradecimiento (I thank thee for...), 3) Peticiones (I ask thee...), 4) Cierre (In the name of Jesus Christ, Amen).',
         '¿Puedo practicar la pronunciación?': '¡Sí! Usa la función de "Práctica y Pronunciación" donde puedes escuchar la pronunciación correcta y practicar con ejercicios interactivos.',
         '¿Hay recursos para principiantes?': 'Absolutamente. Tenemos recursos adaptados para todos los niveles, desde frases básicas hasta oraciones más complejas.',
-        '¿Cómo mejoro mi inglés espiritual?': 'Practica regularmente, usa la función de pronunciación, y construye tu vocabulario espiritual paso a paso con nuestra guía estructurada.'
+        '¿Cómo mejoro mi inglés espiritual?': 'Practica regularmente, usa la función de pronunciación, y construye tu vocabulario espiritual paso a paso con nuestra guía estructurada.',
+        '¿Cuánto tiempo toma aprender a orar en inglés?': 'El tiempo varía según tu nivel actual de inglés. Con práctica diaria, puedes ver progreso en 2-4 semanas. La clave es la consistencia.',
+        '¿Puedo guardar mi progreso?': '¡Pronto! Estamos desarrollando un sistema de cuentas donde podrás guardar tu progreso, oraciones favoritas y seguir tu evolución.',
+        '¿Hay ejercicios de escucha?': 'Sí, incluimos ejercicios de escucha con diferentes acentos y velocidades para mejorar tu comprensión auditiva del inglés.',
+        '¿Cómo se pronuncia "Heavenly Father"?': 'Se pronuncia "HEV-en-lee FAH-ther". La "H" es aspirada, y "Father" suena como "FAH-ther" no "FAY-ther".',
+        '¿Puedo practicar con diferentes acentos?': '¡Por supuesto! Ofrecemos pronunciación en inglés americano, británico y otros acentos para que te familiarices con las variaciones.',
+        '¿Hay material para niños?': '¡Excelente pregunta! Estamos creando contenido especial para niños con oraciones simples y ejercicios divertidos adaptados a su edad.'
     };
     
     const response = responses[question] || 'Gracias por tu pregunta. Nuestro equipo te responderá pronto.';
-    showResponse(response);
+    
+    // Hide questions with transition
+    const questionsContainer = document.getElementById('questions-container');
+    questionsContainer.classList.add('hidden');
+    
+    // Show response after transition
+    setTimeout(() => {
+        // Hide questions completely
+        questionsContainer.style.display = 'none';
+        
+        // Update response content
+        document.getElementById('response-title').textContent = question;
+        document.getElementById('response-content').textContent = response;
+        
+        // Show response view
+        const responseView = document.getElementById('response-view');
+        responseView.classList.add('active');
+        
+        // Scroll to top of content
+        const chatbotContent = document.querySelector('.chatbot-content');
+        chatbotContent.scrollTop = 0;
+    }, 400);
+}
+
+// Show questions view (back functionality)
+function showQuestions() {
+    // Hide response view
+    const responseView = document.getElementById('response-view');
+    responseView.classList.remove('active');
+    
+    // Show questions after transition
+    setTimeout(() => {
+        const questionsContainer = document.getElementById('questions-container');
+        questionsContainer.style.display = 'block';
+        questionsContainer.classList.remove('hidden');
+        
+        // Scroll to top of content
+        const chatbotContent = document.querySelector('.chatbot-content');
+        chatbotContent.scrollTop = 0;
+    }, 200);
 }
 
 // Handle send message
 function handleSendMessage() {
-    showResponse('Gracias por tu mensaje. Te responderemos en las próximas 24 horas.');
+    showQuestionResponse('Enviar mensaje');
+    // Update response manually for this case
+    setTimeout(() => {
+        document.getElementById('response-title').textContent = 'Mensaje enviado';
+        document.getElementById('response-content').textContent = 'Gracias por tu mensaje. Te responderemos en las próximas 24 horas.';
+    }, 600);
 }
 
 // Handle search
 function handleSearch(query) {
     if (query.trim()) {
-        showResponse(`Buscando información sobre: "${query}". Nuestro equipo te ayudará pronto.`);
+        showQuestionResponse(query);
+        // Update response manually for search
+        setTimeout(() => {
+            document.getElementById('response-title').textContent = 'Búsqueda: ' + query;
+            document.getElementById('response-content').textContent = `Buscando información sobre: "${query}". Nuestro equipo te ayudará pronto.`;
+            
+            // Clear search input
+            const searchInput = document.querySelector('.chatbot-search-input');
+            searchInput.value = '';
+        }, 600);
     }
 }
 
-// Show response (you can expand this to show actual chat messages)
-function showResponse(message) {
-    // For now, just show an alert. You can expand this to show actual chat messages
-    alert(message);
-}

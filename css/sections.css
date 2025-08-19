@@ -207,6 +207,7 @@
 .expect-section {
     padding: 80px 0;
     background-color: var(--bg-primary);
+    overflow: hidden;
 }
 
 /* Resources Section */
